@@ -16,22 +16,6 @@ function App() {
       <CssBaseline />
       <>
         <DrawerAppBar />
-        <Container sx={{ alignContent: "center" }}>
-          <Box sx={{ boxShadow: 2, mb: 5, textAlign: "center" }}>
-            <Typography
-              variant="h1"
-              color="initial"
-              sx={{ fontWeight: "medium" }}
-            >
-              Esto es un titulo
-            </Typography>
-          </Box>
-          <Box sx={{ height: "100vh", boxShadow: 3, textAlign: "center" }}>
-            <Typography variant="h2" color="initial">
-              Esto es otro titulo
-            </Typography>
-          </Box>
-        </Container>
         <Footer />
       </>
     </ThemeProvider>

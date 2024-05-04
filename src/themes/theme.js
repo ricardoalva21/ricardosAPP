@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles";
 // colores registrados de la marca: 
 // verde: 55cc32
 // morado: 7f2499
-// rosado: ec0062
+// rosado:  ec0062
 
 const theme = createTheme({
   // day mode
