@@ -9,6 +9,7 @@ import "@fontsource/roboto/700.css";
 import DrawerAppBar from "./components/DrawerAppBar";
 import Footer from "./components/Footer";
 import theme from './themes/theme';
+import Jobs from "./pages/Jobs";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <CssBaseline />
       <>
         <DrawerAppBar />
+        <Jobs/>
         <Footer />
       </>
     </ThemeProvider>
