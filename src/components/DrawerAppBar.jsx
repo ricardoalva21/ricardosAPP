@@ -16,7 +16,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
-const navItems = ["Home", 'Jobs', "About", "Contact"];
+const navItems = ["Inicio", "Trabajos", "¿Quienes Somos?", "Contacto"];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -29,7 +29,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Your dreams are awaiting!
+        I C Q
       </Typography>
       <Divider />
       <List>
@@ -44,13 +44,12 @@ function DrawerAppBar(props) {
     </Box>
   );
 
-  const container =
-    window !== undefined ? () => document.body : undefined;
+  const container = window !== undefined ? () => document.body : undefined;
 
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav"> 
+      <AppBar component="nav">
         <Toolbar>
           <IconButton
             color="inherit"
@@ -66,7 +65,7 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            Ricardo`s App
+            ICQ Infancia Crece Querida
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
