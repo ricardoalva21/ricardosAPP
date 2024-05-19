@@ -9,6 +9,7 @@ import DrawerAppBar from "./components/DrawerAppBar";
 import Footer from "./components/Footer";
 import theme from './themes/theme';
 import Jobs from "./pages/Jobs";
+import SecondAppBBar from "./components/SecondAppBar";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <CssBaseline />
       <>
         <DrawerAppBar />
+        <SecondAppBBar/>
         <Jobs/>
         <Footer />
       </>

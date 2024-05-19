@@ -14,6 +14,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import Logo from "../assets/images/logo_icq.jpeg";
 
 const drawerWidth = 240;
 const navItems = ["Inicio", "Trabajos", "¿Quienes Somos?", "Contacto"];
@@ -49,7 +50,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" sx={{ marginBottom: 8 }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -60,12 +61,24 @@ function DrawerAppBar(props) {
           >
             <MenuIcon />
           </IconButton>
+          {/* Logo */}
+          {/* <Box sx={{
+            height: "100px",
+            width: '100px',
+            backgroundImage: `url(${Logo})`,
+            backgroundSize: 'contain',
+            alignContent: 'center',
+          }}></Box> */}
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              color: "#fff",
+              display: { xs: "none", sm: "block" },
+            }}
           >
-            ICQ Infancia Crece Querida
+            I C Q
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (

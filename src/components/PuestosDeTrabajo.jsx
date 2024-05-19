@@ -27,7 +27,7 @@ const puestosDisponibles = [
     descripcion: "hola hijo",
     requisitos: "hell yeah",
     imagen: "@",
-  }
+  },
 ];
 
 // Se defiene el formato del card
@@ -37,22 +37,26 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos, imagen }) => {
     <Paper
       sx={{
         display: "flex",
-        justifyContent: "space-between", // Distribuye los elementos de manera equitativa
-        alignItems: "center", // Centra verticalmente los elementos
+        justifyContent: "space-between", 
+        alignItems: "center",
         padding: 2,
         marginBottom: 3,
+        marginRight: "4rem",
+        marginLeft: "4rem"
+        
       }}
       elevation={3}
       square={false}
     >
-      <img src={imagen} alt={`Imagen de ${puesto}`} />
-      <Typography variant="h4">{puesto}</Typography>
+      {/* <img src={imagen} alt={`Imagen de ${puesto}`} /> */}
+      <Typography variant="h5">{puesto}</Typography>
       {/* <Typography variant="body1">{descripcion}</Typography> */}
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Box sx={{  display: "flex", justifyContent: "space-between" }}>
         <Button
           onClick={() => alert(descripcion)}
           sx={{ marginRight: 1 }}
           variant="outlined"
+          size="small"
         >
           Descripcion
         </Button>
@@ -60,10 +64,13 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos, imagen }) => {
           onClick={() => alert(requisitos)}
           sx={{ marginRight: 1 }}
           variant="outlined"
+          size="small"
         >
           Requisitos
         </Button>
-        <Button variant="contained" color="secondary">Aplicar</Button>
+        <Button size="small" sx={{ color: 'white' }} variant="contained" color="secondary" >
+          Aplicar
+        </Button>
       </Box>
     </Paper>
   );
@@ -86,3 +93,4 @@ const PuestosDeTrabajo = () => {
 };
 
 export default PuestosDeTrabajo;
+
