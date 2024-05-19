@@ -22,12 +22,6 @@ const puestosDisponibles = [
     requisitos: "Aca van los requisitos generales minimos para poder aplicar",
     imagen: "@",
   },
-  {
-    puesto: "Soy tu Padre",
-    descripcion: "hola hijo",
-    requisitos: "hell yeah",
-    imagen: "@",
-  },
 ];
 
 // Se defiene el formato del card

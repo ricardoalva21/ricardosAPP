@@ -17,7 +17,7 @@ import Button from "@mui/material/Button";
 import Logo from "../assets/images/logo_icq.jpeg";
 
 const drawerWidth = 240;
-const navItems = ["Inicio", "Trabajos", "¿Quienes Somos?", "Contacto"];
+const navItems = ["Inicio", "¿Quienes Somos?","Trabajos", "Contacto"];
 
 function DrawerAppBar(props) {
   const { window } = props;
