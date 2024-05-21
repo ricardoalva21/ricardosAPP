@@ -12,7 +12,7 @@ function SecondAppBBar() {
   return (
     <Box
       sx={{
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: theme.palette.success.main,
       }}
     >
       <Box
@@ -30,11 +30,11 @@ function SecondAppBBar() {
           component="div"
           sx={{
             flexGrow: 1,
-            color: "#fff",
+            color: theme.palette.background.paper,
             display: { xs: "none", sm: "block" },
           }}
         >
-          ICQ Infancia Crece Querida
+       Infancia Crece Querida
         </Typography>
         <Box sx={{ display: { xs: "none", sm: "block" } }}>
           {navItems.map((item) => (
@@ -42,7 +42,7 @@ function SecondAppBBar() {
               size="small"
               key={item}
               sx={{
-                color: "#fff",
+                color: theme.palette.background.paper,
                 "&hover": { color: theme.palette.success.main },
                 mr: '1rem'
               }}

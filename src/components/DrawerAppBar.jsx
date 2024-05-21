@@ -14,7 +14,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import Logo from "../assets/images/logo_icq.jpeg";
+import Logo from "../assets/images/logo_icq.png";
+import { useTheme } from "@mui/material";
+
+
 
 const drawerWidth = 240;
 const navItems = ["Inicio", "¿Quienes Somos?","Trabajos", "Contacto"];
@@ -26,9 +29,9 @@ function DrawerAppBar(props) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-
+  const theme = useTheme();
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center",  }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         I C Q
       </Typography>
@@ -37,10 +40,22 @@ function DrawerAppBar(props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText  primary={item} />
             </ListItemButton>
           </ListItem>
+          
+          
         ))}
+         <ListItem key='Registrarse' disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemText  primary='Registrarse' />
+            </ListItemButton>
+          </ListItem>
+          <ListItem key='Entrar' disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemText  primary='Entrar' />
+            </ListItemButton>
+          </ListItem>
       </List>
     </Box>
   );
@@ -48,9 +63,9 @@ function DrawerAppBar(props) {
   const container = window !== undefined ? () => document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ marginBottom: 8 }}>
+      <AppBar component="nav" sx={{ marginBottom: 8, backgroundColor: theme.palette.background.paper,}}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -59,30 +74,26 @@ function DrawerAppBar(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{color: theme.palette.success.main}}/>
           </IconButton>
           {/* Logo */}
-          {/* <Box sx={{
-            height: "100px",
+          <Box sx={{
+            height: "40px",
             width: '100px',
             backgroundImage: `url(${Logo})`,
             backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            justifyContent: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             alignContent: 'center',
-          }}></Box> */}
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              color: "#fff",
-              display: { xs: "none", sm: "block" },
-            }}
-          >
-            I C Q
-          </Typography>
+            
+          }}></Box>
+          <Box sx={{ flexGrow: 1 }}></Box> {/* Para empujar los botones al extremo derecho */}
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button key={item} sx={{color: theme.palette.primary.main}}>
                 {item}
               </Button>
             ))}
