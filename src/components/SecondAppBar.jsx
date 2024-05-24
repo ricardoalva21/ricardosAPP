@@ -12,7 +12,7 @@ function SecondAppBBar() {
   return (
     <Box
       sx={{
-        backgroundColor: theme.palette.success.main,
+        backgroundImage: `linear-gradient(to right, ${theme.palette.success.main}, ${theme.palette.background.paper})`, p: 0.5
       }}
     >
       <Box
@@ -34,18 +34,22 @@ function SecondAppBBar() {
             display: { xs: "none", sm: "block" },
           }}
         >
-       Infancia Crece Querida
+          Infancia Crece Querida
         </Typography>
         <Box sx={{ display: { xs: "none", sm: "block" } }}>
           {navItems.map((item) => (
             <Button
-              size="small"
-              key={item}
               sx={{
                 color: theme.palette.background.paper,
-                "&hover": { color: theme.palette.success.main },
-                mr: '1rem'
+                mr: "1rem",
+                my: "5px",
+                borderRadius:"20px",
               }}
+              variant="contained"
+              size="small"
+              key={item}
+              disableElevation
+              color="success"
             >
               {item}
             </Button>

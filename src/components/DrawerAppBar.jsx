@@ -78,7 +78,7 @@ function DrawerAppBar(props) {
           </IconButton>
           {/* Logo */}
           <Box sx={{
-            height: "40px",
+            height: '40px',
             width: '100px',
             backgroundImage: `url(${Logo})`,
             backgroundSize: 'contain',
@@ -88,6 +88,7 @@ function DrawerAppBar(props) {
             alignItems: 'center',
             justifyContent: 'center',
             alignContent: 'center',
+            marginTop: '6px',
             
           }}></Box>
           <Box sx={{ flexGrow: 1 }}></Box> {/* Para empujar los botones al extremo derecho */}

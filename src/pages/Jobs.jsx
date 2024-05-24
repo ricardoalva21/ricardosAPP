@@ -36,8 +36,8 @@ const Jobs = () => {
             paddingTop: 7,
             backgroundImage: `url(${bannerManosFondo})`,
             backgroundSize: "cover", // Asegura que la imagen cubra todo el contenedor
-            backgroundPosition: "center", // Centra la imagen
-            backgroundRepeat: "no-repeat", // Evita que la imagen se repita
+            backgroundPosition: "center", 
+            backgroundRepeat: "no-repeat", 
           }}
         >
           <Box sx={{ textAlign: "center", width: "100%", p: 7 }}>
@@ -56,7 +56,6 @@ const Jobs = () => {
               sx={{
                 color: "white",
                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)",
-      
               }}
               variant="h5"
             >
@@ -69,7 +68,7 @@ const Jobs = () => {
           <PuestosDeTrabajo />
 
           {/* Se define el ya tu sabe*/}
-          <Paper sx={{ opacity: 0.9 }} elevation={2}>
+          <Paper sx={{ opacity: 0.9, marginTop: "20rem" }} elevation={2}>
             <Box sx={{ textAlign: "center", width: "100%", p: 7 }}>
               <Typography sx={{ p: 4 }} variant="h3">
                 ¿Tienes un talento especial?

@@ -36,7 +36,12 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos, imagen }) => {
         padding: 2,
         marginBottom: 3,
         marginRight: "4rem",
-        marginLeft: "4rem"
+        marginLeft: "4rem",
+        flexDirection: {
+          xs: "column", // Column for extra-small screens
+          sm: "row", // Row for small and larger screens
+        },
+        mx: "11rem",
         
       }}
       elevation={3}
