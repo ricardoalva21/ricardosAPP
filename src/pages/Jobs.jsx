@@ -2,7 +2,6 @@ import React from "react";
 import {
   Paper,
   Typography,
-  Card,
   Button,
   Box,
   Container,
@@ -10,9 +9,19 @@ import {
 } from "@mui/material";
 import PuestosDeTrabajo from "../components/PuestosDeTrabajo";
 import bannerManosFondo from "../assets/images/banner_fondo_manos.png";
+import { hexToRGBA } from "../utils/colorUtils";
 
 const Jobs = () => {
-  const theme = useTheme(); // Obtén el tema actual
+  const theme = useTheme();
+
+  const secondaryColorWithTransparency = hexToRGBA(
+    theme.palette.secondary.main,
+    0.5
+  );
+  const paperColorWithTransparency = hexToRGBA(
+    theme.palette.background.paper,
+    0.5
+  );
 
   return (
     <Box
@@ -28,7 +37,7 @@ const Jobs = () => {
       <Container
         maxWidth="lg"
         sx={{
-          backgroundColor: theme.palette.secondary.main,
+          backgroundImage: `linear-gradient(to top, ${secondaryColorWithTransparency}, ${paperColorWithTransparency})`,
         }}
       >
         <Paper
@@ -36,8 +45,8 @@ const Jobs = () => {
             paddingTop: 7,
             backgroundImage: `url(${bannerManosFondo})`,
             backgroundSize: "cover", // Asegura que la imagen cubra todo el contenedor
-            backgroundPosition: "center", 
-            backgroundRepeat: "no-repeat", 
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         >
           <Box sx={{ textAlign: "center", width: "100%", p: 7 }}>
