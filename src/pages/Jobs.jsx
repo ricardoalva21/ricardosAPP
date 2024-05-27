@@ -47,6 +47,7 @@ const Jobs = () => {
             backgroundSize: "cover", // Asegura que la imagen cubra todo el contenedor
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+            borderRadius: "1%"
           }}
         >
           <Box sx={{ textAlign: "center", width: "100%", p: 7 }}>
