@@ -8,6 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import PuestosDeTrabajo from "../components/PuestosDeTrabajo";
+import PuestosDeTrabajo2 from "../components/PuestosDeTrabajo2";
 import bannerManosFondo from "../assets/images/banner_fondo_manos.png";
 import { hexToRGBA } from "../utils/colorUtils";
 
@@ -32,12 +33,14 @@ const Jobs = () => {
         backgroundSize: "cover",
         backgroundPosition: "center", // Centra la imagen
         backgroundRepeat: "no-repeat",
+        paddingTop:"2rem",
       }}
     >
       <Container
         maxWidth="lg"
         sx={{
           backgroundImage: `linear-gradient(to top, ${secondaryColorWithTransparency}, ${paperColorWithTransparency})`,
+          paddingTop:"1.5rem"
         }}
       >
         <Paper
@@ -47,7 +50,6 @@ const Jobs = () => {
             backgroundSize: "cover", // Asegura que la imagen cubra todo el contenedor
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            borderRadius: "1%"
           }}
         >
           <Box sx={{ textAlign: "center", width: "100%", p: 7 }}>
@@ -75,7 +77,7 @@ const Jobs = () => {
             </Typography>
           </Box>
 
-          <PuestosDeTrabajo />
+          <PuestosDeTrabajo2 />
 
           {/* Se define el ya tu sabe*/}
           <Paper sx={{ opacity: 0.9, marginTop: "20rem" }} elevation={2}>

@@ -12,7 +12,8 @@ function SecondAppBBar() {
   return (
     <Box
       sx={{
-        backgroundImage: `linear-gradient(to right, ${theme.palette.success.main}, ${theme.palette.background.paper})`, p: 0.5
+        backgroundImage: `linear-gradient(to right, ${theme.palette.success.main}, ${theme.palette.background.paper})`,
+        p: 0.5,
       }}
     >
       <Box
@@ -43,7 +44,7 @@ function SecondAppBBar() {
                 color: theme.palette.background.paper,
                 mr: "1rem",
                 my: "5px",
-                borderRadius:"20px",
+                borderRadius: "20px",
               }}
               variant="contained"
               size="small"
