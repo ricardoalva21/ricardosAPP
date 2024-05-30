@@ -10,11 +10,15 @@ import Footer from "./components/Footer";
 import theme from './themes/theme';
 import Jobs from "./pages/Jobs";
 import SecondAppBBar from "./components/SecondAppBar";
+import GlobalStyle from "./themes/globalStyles";
+import { StyledEngineProvider } from '@mui/material/styles';
 
 function App() {
   return (
+    <StyledEngineProvider injectFirst>
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <GlobalStyle/>
       <>
         <DrawerAppBar />
         <SecondAppBBar/>
@@ -22,6 +26,7 @@ function App() {
         <Footer />
       </>
     </ThemeProvider>
+  </StyledEngineProvider>
   );
 }
 

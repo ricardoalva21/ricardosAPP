@@ -52,17 +52,30 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
       square={false}
     >
       {/* Titulo del Puesto y boton */}
-      <Box sx={{
-        width:"400px",
-        
-
-      }}>
+      <Box
+        sx={{
+          width: "400px",
+          marginRight: "0.5rem",
+        }}
+      >
         {" "}
-        <Typography sx={{textAlign:"center", marginBottom:"2rem"}} variant="h5">{puesto}</Typography>
+        <Typography
+          sx={{ textAlign: "center", marginBottom: "2rem" }}
+          variant="h5"
+        >
+          {puesto}
+        </Typography>
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           <Button
             size="small"
-            sx={{ color: "white",}}
+            sx={{
+              color: "white",
+              "&:focus": {
+                // outline: "2px solid rgba(0, 0, 0, 0.5)",
+                // outlineOffset: "3px",
+                // outlineColor: theme.palette.primary.main
+              },
+            }}
             variant="contained"
             color="secondary"
           >
@@ -70,60 +83,49 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
           </Button>
         </Box>
       </Box>
-      {/* Caja acordiones y boton */}
+      {/* Caja acordiones */}
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
+          // justifyContent: "space-between",
+          flexGrow: "3",
+          marginTop: "1.5rem",
+          marginBottom: "1.5rem",
         }}
       >
-        {/*Caja solo acordiones*/}
+        <Accordion slotProps={{ transition: { unmountOnExit: true } }}>
+          <AccordionSummary
+            expandIcon={
+              <ArrowDownwardIcon sx={{ color: theme.palette.success.main }} />
+            }
+            aria-controls="panel1-content"
+            id="panel1-header"
+          >
+            <Typography>Descripcion</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>{descripcion}</Typography>
+          </AccordionDetails>
+        </Accordion>
 
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            marginTop: "1.5rem",
-            marginBottom: "1.5rem",
-          }}
+        <Accordion
+          // sx={{ width: "200px" }}
+          slotProps={{ transition: { unmountOnExit: true } }}
         >
-          <Accordion
-            sx={{ width: "200px" }}
-            slotProps={{ transition: { unmountOnExit: true } }}
+          <AccordionSummary
+            expandIcon={
+              <ArrowDownwardIcon sx={{ color: theme.palette.success.main }} />
+            }
+            aria-controls="panel1-content"
+            id="panel1-header"
           >
-            <AccordionSummary
-              expandIcon={
-                <ArrowDownwardIcon sx={{ color: theme.palette.success.main }} />
-              }
-              aria-controls="panel1-content"
-              id="panel1-header"
-            >
-              <Typography>Descripcion</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>{descripcion}</Typography>
-            </AccordionDetails>
-          </Accordion>
-
-          <Accordion
-            sx={{ width: "200px" }}
-            slotProps={{ transition: { unmountOnExit: true } }}
-          >
-            <AccordionSummary
-              expandIcon={
-                <ArrowDownwardIcon sx={{ color: theme.palette.success.main }} />
-              }
-              aria-controls="panel1-content"
-              id="panel1-header"
-            >
-              <Typography>Requisitos</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>{requisitos}</Typography>
-            </AccordionDetails>
-          </Accordion>
-        </Box>
+            <Typography>Requisitos</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>{requisitos}</Typography>
+          </AccordionDetails>
+        </Accordion>
       </Box>
     </Paper>
   );
