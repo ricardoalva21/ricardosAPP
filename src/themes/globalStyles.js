@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   button:focus,
@@ -6,5 +6,9 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
   }
 `;
+
+// outline: "2px solid rgba(0, 0, 0, 0.5)",
+// outlineOffset: "3px",
+// outlineColor: theme.palette.primary.main
 
 export default GlobalStyle;

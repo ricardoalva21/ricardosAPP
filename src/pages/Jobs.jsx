@@ -26,7 +26,9 @@ const Jobs = () => {
 
   return (
     <Box
+    
       sx={{
+        // maxWidth: "100vw",
         width: "100vw",
         minHeight: "100vh",
         backgroundImage: `url(${bannerManosFondo})`,

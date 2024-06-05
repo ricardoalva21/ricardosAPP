@@ -5,14 +5,17 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { hexToRGBA } from "../utils/colorUtils";
 
 // Info puestos de trabajo
 
 const puestosDisponibles = [
   {
     puesto: "Atencion Integral de Infantes",
-    descripcion: "Aca se describe el puesto de trabajo",
-    requisitos: "Aca van los requisitos generales minimos para poder aplicar",
+    descripcion:
+      "⦿ Cuido de niños. ⦿ Horarios diurnos, nocturnos y mixtos. ⦿ Se trabaja con niños de diversas edades.",
+    requisitos:
+      "⦿ Bachiller en prescolar ⦿ Si se encuentra estudiando, necesita 20 materias minimo aprobadas, certificadas. ⦿ De cualquier otra manera, necesita 2 años minimos de experiencia laborando con niños",
   },
   {
     puesto: "Cocina, Limpieza y Apoyo de Infantes",
@@ -31,6 +34,19 @@ const puestosDisponibles = [
 const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
   const theme = useTheme();
 
+  const secondaryColorWithTransparency = hexToRGBA(
+    theme.palette.secondary.main,
+    0.5
+  );
+  const paperColorWithTransparency = hexToRGBA(
+    theme.palette.background.paper,
+    0.5
+  );
+  const successColorWithTransparency = hexToRGBA(
+    theme.palette.success.main,
+    0.5
+  );
+
   return (
     <Paper
       sx={{
@@ -44,9 +60,11 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
         flexDirection: {
           xs: "column", // Column for extra-small screens
           sm: "columm",
+          xl: "row",
           lg: "row", // Row for small and larger screens
         },
-        mx: "11rem",
+        // mx: "11rem",
+        minWidth: "400px",
       }}
       elevation={3}
       square={false}
@@ -54,8 +72,9 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
       {/* Titulo del Puesto y boton */}
       <Box
         sx={{
-          width: "400px",
-          marginRight: "0.5rem",
+          width: "50%",
+          marginRight: "2rem",
+          marginLeft: "1rem",
         }}
       >
         {" "}
@@ -65,16 +84,12 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
         >
           {puesto}
         </Typography>
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <Box sx={{ display: "flex", flexDirection: "column", mx: "1rem" }}>
           <Button
             size="small"
             sx={{
               color: "white",
-              "&:focus": {
-                // outline: "2px solid rgba(0, 0, 0, 0.5)",
-                // outlineOffset: "3px",
-                // outlineColor: theme.palette.primary.main
-              },
+              // minWidth:"300px"
             }}
             variant="contained"
             color="secondary"
@@ -88,41 +103,52 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          // justifyContent: "space-between",
-          flexGrow: "3",
+          // width: "100%",
+          flexGrow: "1",
           marginTop: "1.5rem",
           marginBottom: "1.5rem",
+          marginRight: "2rem",
         }}
       >
-        <Accordion slotProps={{ transition: { unmountOnExit: true } }}>
+        {/* Acordion Descripcion */}
+        <Accordion sx={{maxWidth: "500px", minWidth: "500px"}} slotProps={{ transition: { unmountOnExit: true } }}>
           <AccordionSummary
             expandIcon={
-              <ArrowDownwardIcon sx={{ color: theme.palette.success.main }} />
+              <ArrowDownwardIcon sx={{ color: theme.palette.primary.main }} />
             }
             aria-controls="panel1-content"
             id="panel1-header"
           >
             <Typography>Descripcion</Typography>
           </AccordionSummary>
-          <AccordionDetails>
-            <Typography>{descripcion}</Typography>
+          <AccordionDetails
+            sx={{
+              backgroundImage: `linear-gradient(to top, ${secondaryColorWithTransparency}, ${paperColorWithTransparency})`,
+              fontStyle: "oblique",
+            }}
+          >
+            <Typography sx={{ maxWidth: "400px", minWidth: "400px" }}>
+              {descripcion}
+            </Typography>
           </AccordionDetails>
         </Accordion>
-
-        <Accordion
-          // sx={{ width: "200px" }}
-          slotProps={{ transition: { unmountOnExit: true } }}
-        >
+        {/* Acordion Requisitos */}
+        <Accordion sx={{maxWidth: "500px", minWidth: "500px"}} slotProps={{ transition: { unmountOnExit: true } }}>
           <AccordionSummary
             expandIcon={
-              <ArrowDownwardIcon sx={{ color: theme.palette.success.main }} />
+              <ArrowDownwardIcon sx={{ color: theme.palette.primary.main }} />
             }
             aria-controls="panel1-content"
             id="panel1-header"
           >
             <Typography>Requisitos</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails
+            sx={{
+              backgroundImage: `linear-gradient(to top, ${successColorWithTransparency}, ${paperColorWithTransparency})`,
+              fontStyle: "oblique",
+            }}
+          >
             <Typography>{requisitos}</Typography>
           </AccordionDetails>
         </Accordion>
@@ -140,7 +166,6 @@ const PuestosDeTrabajo = () => {
           puesto={puesto.puesto}
           descripcion={puesto.descripcion}
           requisitos={puesto.requisitos}
-          imagen={puesto.imagen}
         />
       ))}
     </div>
