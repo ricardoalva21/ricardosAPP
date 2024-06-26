@@ -26,7 +26,6 @@ const Jobs = () => {
 
   return (
     <Box
-    
       sx={{
         // maxWidth: "100vw",
         width: "100vw",
@@ -35,14 +34,14 @@ const Jobs = () => {
         backgroundSize: "cover",
         backgroundPosition: "center", // Centra la imagen
         backgroundRepeat: "no-repeat",
-        paddingTop:"2rem",
+        paddingTop: "2rem",
       }}
     >
       <Container
         maxWidth="lg"
         sx={{
           backgroundImage: `linear-gradient(to top, ${secondaryColorWithTransparency}, ${paperColorWithTransparency})`,
-          paddingTop:"1.5rem"
+          paddingTop: "1.5rem",
         }}
       >
         <Paper
@@ -54,28 +53,43 @@ const Jobs = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <Box sx={{ textAlign: "center", width: "100%", p: 7 }}>
+          <Box
+            sx={{
+              textAlign: "center",
+              width: "100%",
+              p: { xs: 2, sm: 4, md: 7 },
+            }}
+          >
             <Typography
               sx={{
-                p: 12,
+                p: { xs: 2, sm: 4, md: 7 },
                 width: "100%",
                 color: "white",
                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+                fontSize: {
+                  xs: "h5.fontSize",
+                  sm: "h4.fontSize",
+                  md: "h3.fontSize",
+                },
               }}
               variant="h3"
             >
-              ¿A que puesto aplicas?
+              ¿A qué puesto aplicas?
             </Typography>
             <Typography
               sx={{
                 color: "white",
                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)",
+                fontSize: {
+                  xs: "body1.fontSize",
+                  sm: "h6.fontSize",
+                  md: "h5.fontSize",
+                },
               }}
               variant="h5"
             >
-              {" "}
               Nos enfocamos en brindar un servicio de alta calidad para el bien
-              mayor de los ninos.
+              mayor de los niños.
             </Typography>
           </Box>
 

@@ -1,14 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Paper, Button, Typography, useTheme } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { hexToRGBA } from "../utils/colorUtils";
 
-// Info puestos de trabajo
-
+// Datos de puestos de trabajo disponibles
 const puestosDisponibles = [
   {
     puesto: "Atencion Integral de Infantes",
@@ -29,11 +27,19 @@ const puestosDisponibles = [
   },
 ];
 
-// Se defiene el formato del card
-
-const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
+// Componente para representar cada tarjeta de puesto de trabajo
+const CardPuestoDeTrabajo = ({
+  puesto,
+  descripcion,
+  requisitos,
+  expanded,
+  handleChange,
+  index,
+}) => {
+  // Obtener el tema para acceder a los colores definidos
   const theme = useTheme();
 
+  // Convertir colores a colores con transparencia
   const secondaryColorWithTransparency = hexToRGBA(
     theme.palette.secondary.main,
     0.5
@@ -53,18 +59,17 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
         display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
-        padding: 4,
+        padding: { xs: 2, sm: 3, md: 4 },
         marginBottom: "2rem",
-        marginRight: "4rem",
-        marginLeft: "4rem",
+        marginRight: { xs: "auto", sm: "2rem", md: "4rem" },
+        marginLeft: { xs: "auto", sm: "2rem", md: "4rem" },
         flexDirection: {
-          xs: "column", // Column for extra-small screens
-          sm: "columm",
+          xs: "column",
+          sm: "column",
+          lg: "row",
           xl: "row",
-          lg: "row", // Row for small and larger screens
         },
-        // mx: "11rem",
-        minWidth: "400px",
+        minWidth: { xs: "100%", sm: "400px" },
       }}
       elevation={3}
       square={false}
@@ -72,12 +77,11 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
       {/* Titulo del Puesto y boton */}
       <Box
         sx={{
-          width: "50%",
-          marginRight: "2rem",
-          marginLeft: "1rem",
+          width: { xs: "100%", lg: "50%" },
+          marginRight: { lg: "2rem" },
+          marginLeft: { lg: "1rem" },
         }}
       >
-        {" "}
         <Typography
           sx={{ textAlign: "center", marginBottom: "2rem" }}
           variant="h5"
@@ -89,7 +93,6 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
             size="small"
             sx={{
               color: "white",
-              // minWidth:"300px"
             }}
             variant="contained"
             color="secondary"
@@ -103,15 +106,20 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          // width: "100%",
           flexGrow: "1",
-          marginTop: "1.5rem",
-          marginBottom: "1.5rem",
-          marginRight: "2rem",
+          marginTop: { xs: "1rem", sm: "1.5rem" },
+          marginBottom: { xs: "1rem", sm: "1.5rem" },
+          marginRight: { xs: "0", lg: "2rem" },
+          width: { xs: "100%", lg: "50%" },
         }}
       >
         {/* Acordion Descripcion */}
-        <Accordion sx={{maxWidth: "500px", minWidth: "500px"}} slotProps={{ transition: { unmountOnExit: true } }}>
+        <Accordion
+          expanded={expanded === `${index}-panel1`}
+          onChange={handleChange(`${index}-panel1`)}
+          sx={{ maxWidth: "100%", minWidth: "100%" }}
+          slotProps={{ transition: { unmountOnExit: true } }}
+        >
           <AccordionSummary
             expandIcon={
               <ArrowDownwardIcon sx={{ color: theme.palette.primary.main }} />
@@ -127,19 +135,24 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
               fontStyle: "oblique",
             }}
           >
-            <Typography sx={{ maxWidth: "400px", minWidth: "400px" }}>
+            <Typography sx={{ maxWidth: "100%", minWidth: "100%" }}>
               {descripcion}
             </Typography>
           </AccordionDetails>
         </Accordion>
         {/* Acordion Requisitos */}
-        <Accordion sx={{maxWidth: "500px", minWidth: "500px"}} slotProps={{ transition: { unmountOnExit: true } }}>
+        <Accordion
+          expanded={expanded === `${index}-panel2`}
+          onChange={handleChange(`${index}-panel2`)}
+          sx={{ maxWidth: "100%", minWidth: "100%" }}
+          slotProps={{ transition: { unmountOnExit: true } }}
+        >
           <AccordionSummary
             expandIcon={
               <ArrowDownwardIcon sx={{ color: theme.palette.primary.main }} />
             }
-            aria-controls="panel1-content"
-            id="panel1-header"
+            aria-controls="panel2-content"
+            id="panel2-header"
           >
             <Typography>Requisitos</Typography>
           </AccordionSummary>
@@ -149,7 +162,9 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
               fontStyle: "oblique",
             }}
           >
-            <Typography>{requisitos}</Typography>
+            <Typography sx={{ maxWidth: "100%", minWidth: "100%" }}>
+              {requisitos}
+            </Typography>
           </AccordionDetails>
         </Accordion>
       </Box>
@@ -157,15 +172,28 @@ const CardPuestoDeTrabajo = ({ puesto, descripcion, requisitos }) => {
   );
 };
 
+// Componente principal para listar los puestos de trabajo
 const PuestosDeTrabajo = () => {
+  // Estado para controlar qué acordeón está expandido
+  const [expanded, setExpanded] = useState(false);
+
+  // Manejador de cambio de estado de los acordeones
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   return (
     <div>
+      {/* Mapeo de los puestos de trabajo para crear tarjetas */}
       {puestosDisponibles.map((puesto, index) => (
         <CardPuestoDeTrabajo
           key={index}
           puesto={puesto.puesto}
           descripcion={puesto.descripcion}
           requisitos={puesto.requisitos}
+          expanded={expanded}
+          handleChange={handleChange}
+          index={index}
         />
       ))}
     </div>
