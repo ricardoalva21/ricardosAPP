@@ -12,6 +12,7 @@ import Jobs from "./pages/Jobs";
 import SecondAppBBar from "./components/SecondAppBar";
 import GlobalStyle from "./themes/globalStyles";
 import { StyledEngineProvider } from '@mui/material/styles';
+import ContactPage from "./pages/Contacto";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <DrawerAppBar />
         <SecondAppBBar/>
         <Jobs/>
+        <ContactPage/>
         <Footer />
       </>
     </ThemeProvider>

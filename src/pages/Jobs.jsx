@@ -30,6 +30,7 @@ const Jobs = () => {
         // maxWidth: "100vw",
         width: "100vw",
         minHeight: "100vh",
+        maxWidth: "1920px",
         backgroundImage: `url(${bannerManosFondo})`,
         backgroundSize: "cover",
         backgroundPosition: "center", // Centra la imagen
@@ -51,12 +52,14 @@ const Jobs = () => {
             backgroundSize: "cover", // Asegura que la imagen cubra todo el contenedor
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+            paddingBottom: "5rem",
           }}
         >
           <Box
             sx={{
               textAlign: "center",
               width: "100%",
+              marginBottom: "5rem",
               p: { xs: 2, sm: 4, md: 7 },
             }}
           >
@@ -93,38 +96,80 @@ const Jobs = () => {
             </Typography>
           </Box>
 
+          {/* Se imprimen los puestos de trabajo */}
           <PuestosDeTrabajo2 />
 
-          {/* Se define el ya tu sabe*/}
-          <Paper sx={{ opacity: 0.9, marginTop: "20rem" }} elevation={2}>
-            <Box sx={{ textAlign: "center", width: "100%", p: 7 }}>
-              <Typography sx={{ p: 4 }} variant="h3">
+          {/*Se define el segmento Otros Puestos*/}
+          <Paper
+            sx={{
+              opacity: 0.9,
+              marginTop: "5rem",
+
+              alignContent: "center",
+            }}
+            elevation={2}
+          >
+            {/* contiene los 3 elementos del segmento */}
+            <Box
+              sx={{
+                textAlign: "center",
+                width: "100%",
+                p: 7,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                marginBottom: "3rem",
+              }}
+            >
+              {/* se describe el titulo del segmento */}
+              <Typography
+                sx={{
+                  p: { xs: 2, sm: 4, md: 7 },
+
+                  fontSize: {
+                    xs: "h5.fontSize",
+                    sm: "h4.fontSize",
+                    md: "h3.fontSize",
+                  },
+                }}
+                variant="h3"
+              >
                 ¿Tienes un talento especial?
               </Typography>
-              <Typography variant="h5">
+
+              {/* se describe texto descriptivo */}
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: {
+                    xs: "body1.fontSize",
+                    sm: "h6.fontSize",
+                    md: "h5.fontSize",
+                  },
+                  paddingBottom: "2rem",
+                }}
+              >
                 {" "}
                 En nuestra empresa siempre buscamos trabajar con personas con
-                ganas de superacion y con deseos de crecer.
+                ganas de superacion y deseos de crecer.
               </Typography>
-            </Box>
 
-            <Box p={6}>
-              <Paper
+              {/* se coloca el boton */}
+              <Button
                 sx={{
                   display: "flex",
-                  justifyContent: "space-between", // Distribuye los elementos de manera equitativa
-                  alignItems: "center", // Centra verticalmente los elementos
-                  padding: 2,
-                  marginBottom: 3,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  alignContent: "center",
+                  width: "80%",
+                  m: "auto",
                 }}
-                elevation={3}
-                square={false}
+                size="medium"
+                variant="contained"
+                color="success"
               >
-                <Typography variant="h4">Otros Puestos</Typography>
-                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                  <Button variant="contained">Cuentanos de ti</Button>
-                </Box>
-              </Paper>
+                Cuentanos de ti
+              </Button>
             </Box>
           </Paper>
         </Paper>

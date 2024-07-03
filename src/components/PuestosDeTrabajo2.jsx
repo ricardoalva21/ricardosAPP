@@ -13,7 +13,7 @@ const puestosDisponibles = [
     descripcion:
       "⦿ Cuido de niños. ⦿ Horarios diurnos, nocturnos y mixtos. ⦿ Se trabaja con niños de diversas edades.",
     requisitos:
-      "⦿ Bachiller en prescolar ⦿ Si se encuentra estudiando, necesita 20 materias minimo aprobadas, certificadas. ⦿ De cualquier otra manera, necesita 2 años minimos de experiencia laborando con niños",
+      "⦿ Bachiller en prescolar ⦿ Si se encuentra estudiando, necesita 20 materias certificadas. ⦿ De cualquier otra manera, necesita 2 años minimos de experiencia laborando con niños",
   },
   {
     puesto: "Cocina, Limpieza y Apoyo de Infantes",
@@ -21,7 +21,22 @@ const puestosDisponibles = [
     requisitos: "Aca van los requisitos generales minimos para poder aplicar",
   },
   {
-    puesto: "Promotor de Salud",
+    puesto: "Promotor de Salud y Nutricion",
+    descripcion: "Aca se describe el puesto de trabajo",
+    requisitos: "Aca van los requisitos generales minimos para poder aplicar",
+  },
+  {
+    puesto: "Maestra Preescolar",
+    descripcion: "Aca se describe el puesto de trabajo",
+    requisitos: "Aca van los requisitos generales minimos para poder aplicar",
+  },
+  {
+    puesto: "Miscelanea / Conserje",
+    descripcion: "Aca se describe el puesto de trabajo",
+    requisitos: "Aca van los requisitos generales minimos para poder aplicar",
+  },
+  {
+    puesto: "Cocina",
     descripcion: "Aca se describe el puesto de trabajo",
     requisitos: "Aca van los requisitos generales minimos para poder aplicar",
   },
