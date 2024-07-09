@@ -48,7 +48,7 @@ const Jobs = () => {
         <Paper
           sx={{
             paddingTop: 7,
-            backgroundImage: `url(${bannerManosFondo})`,
+            backgroundColor: `rgba(255, 255, 255, 0.3)`,
             backgroundSize: "cover", // Asegura que la imagen cubra todo el contenedor
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
