@@ -65,6 +65,7 @@ const ContactPage = () => {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             paddingBottom: "5rem",
+            marginTop: "4rem",
           }}
         >
           {/* Titulo del segmento */}
@@ -78,7 +79,16 @@ const ContactPage = () => {
             contacto proporcionados.
           </Typography>
           {/* Se define formulario */}
-          <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2, mb: 4 }}>
+          <Box
+            component="form"
+            onSubmit={handleSubmit}
+            sx={{
+              mt: 2,
+              mb: 4,
+              marginRight: { xs: "auto", sm: "2rem", md: "4rem" },
+              marginLeft: { xs: "auto", sm: "2rem", md: "4rem" },
+            }}
+          >
             <Paper elevation={3} sx={{ p: 4 }}>
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
@@ -122,7 +132,7 @@ const ContactPage = () => {
             </Paper>
           </Box>
           {/* se define el mapa de google maps */}
-          <Box sx={{ mt: 4, displa: "flex", m: "auto", marginTop:"6rem"}}>
+          <Box sx={{ mt: 4, displa: "flex", m: "auto", marginTop: "6rem" }}>
             <Box>
               {" "}
               <iframe

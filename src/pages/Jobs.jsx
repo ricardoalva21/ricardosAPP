@@ -8,7 +8,6 @@ import {
   useTheme,
 } from "@mui/material";
 import PuestosDeTrabajo from "../components/PuestosDeTrabajo";
-import PuestosDeTrabajo2 from "../components/PuestosDeTrabajo2";
 import bannerManosFondo from "../assets/images/banner_fondo_manos.png";
 import { hexToRGBA } from "../utils/colorUtils";
 
@@ -59,8 +58,9 @@ const Jobs = () => {
             sx={{
               textAlign: "center",
               width: "100%",
-              marginBottom: "5rem",
+              // marginBottom: "5rem",
               p: { xs: 2, sm: 4, md: 7 },
+              marginTop: "-4rem"
             }}
           >
             <Typography
@@ -77,7 +77,7 @@ const Jobs = () => {
               }}
               variant="h3"
             >
-              ¿A qué puesto aplicas?
+              ¡Unete a nuestro equipo de trabajo!
             </Typography>
             <Typography
               sx={{
@@ -89,15 +89,30 @@ const Jobs = () => {
                   md: "h5.fontSize",
                 },
               }}
-              variant="h5"
+              variant="h4"
             >
               Nos enfocamos en brindar un servicio de alta calidad para el bien
               mayor de los niños.
             </Typography>
+            <Typography
+              sx={{
+                color: "white",
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)",
+                marginTop: "4rem",
+                fontSize: {
+                  xs: "body1.fontSize",
+                  sm: "h6.fontSize",
+                  md: "h5.fontSize",
+                },
+              }}
+              variant="h4"
+            >
+              ¿A qué puesto aplicas?
+            </Typography>
           </Box>
 
           {/* Se imprimen los puestos de trabajo */}
-          <PuestosDeTrabajo2 />
+          <PuestosDeTrabajo />
 
           {/*Se define el segmento Otros Puestos*/}
           <Paper
