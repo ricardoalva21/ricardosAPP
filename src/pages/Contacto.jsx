@@ -70,7 +70,7 @@ const ContactPage = () => {
         >
           {/* Titulo del segmento */}
           <Typography variant="h4" align="center" gutterBottom>
-            Contacto
+          ¿Tienes Preguntas?
           </Typography>
           {/* Descripcion del segmento */}
           <Typography variant="body1" align="center" paragraph>
@@ -146,7 +146,9 @@ const ContactPage = () => {
               ></iframe>
             </Box>
             {/* Se define informacion de contacto */}
-            <Box>
+            <Box sx={{
+              paddingTop: "4rem",
+            }}>
               <Typography variant="h5" align="center" gutterBottom>
                 Información de Contacto
               </Typography>
