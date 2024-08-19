@@ -7,11 +7,11 @@ import {
   Grid,
   useTheme,
 } from "@mui/material";
-import bannerQuienesSomos from "../assets/images/banner_Quienes_Somos.jpeg";
+import bannerQuienesSomos from "../assets/images/banner_Home.jpeg";
 import bannerKidsAboutUs from "../assets/images/banner_kidsAboutUs.png";
 import { hexToRGBA } from "../utils/colorUtils";
 
-const SobreNosotros = () => {
+const Home = () => {
   const theme = useTheme();
 
   const primaryColorWithTransparency = hexToRGBA(
@@ -22,9 +22,9 @@ const SobreNosotros = () => {
     theme.palette.background.paper,
     0.5
   );
-  const paperColorWithTransparencyFull = hexToRGBA(
-    theme.palette.background.paper,
-    0.9
+  const successColorWithTransparencyFull = hexToRGBA(
+    theme.palette.success.main,
+    0.4
   );
 
   return (
@@ -43,7 +43,7 @@ const SobreNosotros = () => {
       <Container
         maxWidth="lg"
         sx={{
-          backgroundImage: `linear-gradient(to top, ${primaryColorWithTransparency}, ${paperColorWithTransparency})`,
+          backgroundImage: `linear-gradient(to top, ${successColorWithTransparencyFull}, ${paperColorWithTransparency})`,
           paddingTop: "1.5rem",
           height: "100%",
           width: "100%",
@@ -53,11 +53,11 @@ const SobreNosotros = () => {
           sx={{
             padding: 4,
             backgroundColor: `rgba(255, 255, 255, 0.5)`,
-            marginBottom: "6rem",
+            marginBottom: "8rem",
             marginTop: "6rem",
           }}
         >
-          {/* Contenido Sobre Nosotros */}
+          {/* Contenido Home */}
 
           <Box sx={{p:7}}>
             <Grid container spacing={4}>
@@ -70,7 +70,7 @@ const SobreNosotros = () => {
                     p: 2,
                   }}
                 >
-                  Sobre Nosotros
+                  Bienvenidos a {<br />} ICQ Infancia Crece Querida
                 </Typography>
                 <Typography
                   variant="body1"
@@ -88,19 +88,16 @@ const SobreNosotros = () => {
                   amor y dedicación.
                 </Typography>
                 {/* Imagen */}
-                <Box
-                  component="img"
-                  src={bannerKidsAboutUs}
-                  sx={{
-                    width: "100%",
-                    height: "auto",
-                    marginTop: 2,
-                    borderRadius: 1,
-                  }}
-                />
-              </Grid>
-              {/* Parte Derecha */}
-              <Grid item xs={12} md={6}>
+                {/* <Box
+                component="img"
+                src={bannerKidsAboutUs}
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                  marginTop: 2,
+                  borderRadius: 1,
+                }}
+              /> */}
                 <Typography
                   variant="body1"
                   color="initial"
@@ -115,6 +112,20 @@ const SobreNosotros = () => {
                   estamos emocionados de expandir nuestra misión a otros países
                   de la región en el futuro cercano.
                 </Typography>
+              </Grid>
+              {/* Parte Derecha */}
+              <Grid item xs={12} md={6}>
+                <Box
+                  component="img"
+                  src={bannerKidsAboutUs}
+                  sx={{
+                    width: "100%",
+                    height: "auto",
+                    marginTop: 2,
+                    borderRadius: 1,
+                  }}
+                />
+
                 <Typography
                   variant="body1"
                   color="initial"
@@ -139,4 +150,4 @@ const SobreNosotros = () => {
   );
 };
 
-export default SobreNosotros;
+export default Home;

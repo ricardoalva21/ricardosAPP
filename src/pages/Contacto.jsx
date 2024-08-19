@@ -70,7 +70,7 @@ const ContactPage = () => {
         >
           {/* Titulo del segmento */}
           <Typography variant="h4" align="center" gutterBottom>
-          ¿Tienes Preguntas?
+          ¿Alguna Pregunta?
           </Typography>
           {/* Descripcion del segmento */}
           <Typography variant="body1" align="center" paragraph>

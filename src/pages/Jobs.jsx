@@ -41,17 +41,18 @@ const Jobs = () => {
         maxWidth="lg"
         sx={{
           backgroundImage: `linear-gradient(to top, ${secondaryColorWithTransparency}, ${paperColorWithTransparency})`,
-          paddingTop: "1.5rem",
+          paddingTop: "2rem",
         }}
       >
         <Paper
           sx={{
             paddingTop: 7,
+            paddingBottom: "5rem",
             backgroundColor: `rgba(255, 255, 255, 0.3)`,
             backgroundSize: "cover", // Asegura que la imagen cubra todo el contenedor
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-            paddingBottom: "5rem",
+           
           }}
         >
           <Box

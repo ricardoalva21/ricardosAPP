@@ -14,6 +14,7 @@ import GlobalStyle from "./themes/globalStyles";
 import { StyledEngineProvider } from '@mui/material/styles';
 import ContactPage from "./pages/Contacto";
 import SobreNosotros from './pages/SobreNosotros'
+import Home from "./pages/home";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <>
         <DrawerAppBar />
         <SecondAppBBar/>
+        <Home/>
         <SobreNosotros/>
         <Jobs/>
         <ContactPage/>
