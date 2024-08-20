@@ -5,6 +5,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import bannerManosJobs from "../assets/images/banner_manosJobs.png";
 import { hexToRGBA } from "../utils/colorUtils";
 
 // Datos de puestos de trabajo disponibles con IDs únicos generados
@@ -60,7 +61,6 @@ const ApplyButton = () => (
     Aplicar
   </Button>
 );
-
 
 // Componente para un acordeón
 const CustomAccordion = ({
@@ -198,7 +198,9 @@ const PuestosDeTrabajo = () => {
 
   const MostrarOcultarButton = (props) => {
     return (
-      <Box sx={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
+      <Box
+        sx={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}
+      >
         <Button
           variant="contained"
           onClick={toggleMostrarPuestos}
@@ -213,9 +215,21 @@ const PuestosDeTrabajo = () => {
       </Box>
     );
   };
-  
+
   return (
     <div>
+      <Box sx={{display: "flex", justifyContent: "center", width: '100%'}}>
+        <Box
+          component="img"
+          src={bannerManosJobs}
+          sx={{
+            width: { xs: "100%", sm: "80%", md: "70%", lg: "60%" },
+            height: "250px",
+            marginTop: 2,
+            borderRadius: 1,
+          }}
+        />
+      </Box>
       {puestosDisponibles
         .slice(0, mostrarTodos ? puestosDisponibles.length : 2)
         .map((puesto, index) => (
@@ -229,12 +243,8 @@ const PuestosDeTrabajo = () => {
             index={index}
           />
         ))}
-      {!mostrarTodos && (
-        MostrarOcultarButton("Mostrar más puesto de trabajo")
-      )}
-      {mostrarTodos && (
-        MostrarOcultarButton("Ocultar puestos de trabajo")
-      )}
+      {!mostrarTodos && MostrarOcultarButton("Mostrar más puesto de trabajo")}
+      {mostrarTodos && MostrarOcultarButton("Ocultar puestos de trabajo")}
     </div>
   );
 };

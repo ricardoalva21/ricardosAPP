@@ -53,7 +53,7 @@ const Home = () => {
           sx={{
             padding: 4,
             backgroundColor: `rgba(255, 255, 255, 0.5)`,
-            marginBottom: "8rem",
+            marginBottom: "6rem",
             marginTop: "6rem",
           }}
         >
@@ -123,6 +123,7 @@ const Home = () => {
                     height: "auto",
                     marginTop: 2,
                     borderRadius: 1,
+                    opacity: 0
                   }}
                 />
 

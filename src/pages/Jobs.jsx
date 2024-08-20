@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import PuestosDeTrabajo from "../components/PuestosDeTrabajo";
 import bannerManosFondo from "../assets/images/banner_fondo_manos.png";
+
 import { hexToRGBA } from "../utils/colorUtils";
 
 const Jobs = () => {
@@ -34,7 +35,6 @@ const Jobs = () => {
         backgroundSize: "cover",
         backgroundPosition: "center", // Centra la imagen
         backgroundRepeat: "no-repeat",
-        paddingTop: "2rem",
       }}
     >
       <Container
@@ -52,24 +52,23 @@ const Jobs = () => {
             backgroundSize: "cover", // Asegura que la imagen cubra todo el contenedor
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-           
           }}
         >
           <Box
             sx={{
               textAlign: "center",
               width: "100%",
-              // marginBottom: "5rem",
               p: { xs: 2, sm: 4, md: 7 },
-              marginTop: "-4rem"
+              marginTop: "-4rem",
+              marginBottom: "-4rem",
             }}
           >
             <Typography
               sx={{
                 p: { xs: 2, sm: 4, md: 7 },
                 width: "100%",
-                color: "white",
-                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+                color: theme.palette.success.main,
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
                 fontSize: {
                   xs: "h5.fontSize",
                   sm: "h4.fontSize",
@@ -81,34 +80,55 @@ const Jobs = () => {
               ¡Unete a nuestro equipo de trabajo!
             </Typography>
             <Typography
+              variant="body1"
+              color="initial"
+              sx={
+                {
+                  paddingBottom: 8,
+                  // fontWeight: 600,
+                }
+              }
+            >
+              En ICQ Infancia Crece Querida, buscamos personas apasionadas y
+              comprometidas con el bienestar y desarrollo de los niños. Aquí
+              tendrás la oportunidad de marcar una diferencia real, trabajando
+              en un entorno que valora la educación y el cuidado de los más
+              pequeños. Si compartes nuestra visión y estás listo para asumir un
+              nuevo desafío, estamos emocionados de conocerte.
+            </Typography>
+
+            <Typography
+              variant="h4"
               sx={{
-                color: "white",
-                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)",
+                p: 2,
+                color: theme.palette.secondary.contraste,
+                // textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
                 fontSize: {
                   xs: "body1.fontSize",
                   sm: "h6.fontSize",
                   md: "h5.fontSize",
+                  lg: "h4.fontSize",
                 },
               }}
-              variant="h4"
             >
-              Nos enfocamos en brindar un servicio de alta calidad para el bien
-              mayor de los niños.
+              ¡Explora y Aplica!
             </Typography>
             <Typography
               sx={{
-                color: "white",
-                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)",
-                marginTop: "4rem",
+                color: "black",
                 fontSize: {
                   xs: "body1.fontSize",
                   sm: "h6.fontSize",
                   md: "h5.fontSize",
                 },
               }}
-              variant="h4"
+              variant="body2"
             >
-              ¿A qué puesto aplicas?
+              Antes de enviar tu aplicación, revisa detenidamente la descripción
+              del puesto y los requisitos. Queremos que encuentres el lugar
+              ideal para ti, donde puedas crecer y contribuir de la mejor
+              manera. {<br />} ¡Asegúrate de postularte al rol que mejor se
+              ajuste a tus habilidades y experiencia!
             </Typography>
           </Box>
 
