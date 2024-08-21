@@ -59,34 +59,38 @@ const Home = () => {
         >
           {/* Contenido Home */}
 
-          <Box sx={{p:7}}>
+          <Box sx={{ p: 7 }}>
             <Grid container spacing={4}>
               {/* Parte Izquierda */}
               <Grid item xs={12} md={6}>
                 <Typography
                   variant="h4"
-                  color="initial"
                   sx={{
                     p: 2,
+                    color: "black",
                   }}
                 >
                   Bienvenidos a {<br />} ICQ Infancia Crece Querida
                 </Typography>
                 <Typography
-                  variant="body1"
-                  color="initial"
                   sx={{
-                    paddingLeft: 2,
+                    color: "black",
+                    p: 2,
+                    fontSize: {
+                      xs: "body1.fontSize",
+                      sm: "h6.fontSize",
+                      md: "h5.fontSize",
+                    },
                   }}
+                  variant="body2"
                 >
-                  Desde nuestra fundación en 2010, ICQ Infancia Crece Querida ha
-                  trabajado incansablemente para ofrecer una educación de alta
-                  calidad y servicios de cuidado infantil que promuevan el
-                  desarrollo integral de los niños y niñas en todo el territorio
-                  nacional. Nuestra misión es crear entornos seguros y
-                  enriquecedores donde cada niño pueda crecer y aprender con
-                  amor y dedicación.
+                  Nuestra empresa se dedica a la administración de centros
+                  educativos de bien social y privados en todo el territorio
+                  nacional, con planes de expansión a otros países regionales.{" "}
+                  {<br />} Nuestra misión es asegurar el desarrollo integral de
+                  los niños y niñas en entornos seguros y enriquecedores.
                 </Typography>
+
                 {/* Imagen */}
                 {/* <Box
                 component="img"
@@ -98,20 +102,17 @@ const Home = () => {
                   borderRadius: 1,
                 }}
               /> */}
-                <Typography
-                  variant="body1"
-                  color="initial"
-                  align="center"
-                  sx={{ p: 2 }}
-                >
-                  A lo largo de los años, hemos administrado con éxito una red
-                  de centros educativos tanto de bien social como privados,
-                  asegurándonos de que cada uno de ellos cumpla con los más
-                  altos estándares de calidad. Nos enorgullece el impacto
-                  positivo que hemos tenido en nuestras comunidades locales y
-                  estamos emocionados de expandir nuestra misión a otros países
-                  de la región en el futuro cercano.
-                </Typography>
+                <Box
+                  component="img"
+                  src={bannerKidsAboutUs}
+                  sx={{
+                    width: "100%",
+                    height: "auto",
+                    marginTop: 2,
+                    borderRadius: 1,
+                    opacity: 0,
+                  }}
+                />
               </Grid>
               {/* Parte Derecha */}
               <Grid item xs={12} md={6}>
@@ -123,24 +124,37 @@ const Home = () => {
                     height: "auto",
                     marginTop: 2,
                     borderRadius: 1,
-                    opacity: 0
+                    opacity: 0,
                   }}
                 />
 
+                <Typography
+                  variant="h4"
+                  sx={{
+                    p: 2,
+                    color: "black",
+                    // textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
+                    fontSize: {
+                      xs: "body1.fontSize",
+                      sm: "h6.fontSize",
+                      md: "h5.fontSize",
+                      lg: "h4.fontSize",
+                    },
+                  }}
+                >
+                  Nuestros Servicios
+                </Typography>
                 <Typography
                   variant="body1"
                   color="initial"
                   align="center"
                   sx={{ p: 2 }}
                 >
-                  En ICQ, creemos firmemente que el bienestar y el desarrollo de
-                  los niños y niñas son la prioridad más alta. Nuestro equipo de
-                  profesionales dedicados trabaja día a día para garantizar que
-                  cada niño reciba el cuidado, la educación y la atención que
-                  merece. La pasión por el bienestar infantil es el corazón de
-                  todo lo que hacemos, y nos comprometemos a continuar esta
-                  labor con el mismo entusiasmo y dedicación con los que
-                  comenzamos.
+                  ⚫ Administramos una red de centros educativos que ofrecen programas de alta calidad para el desarrollo infantil. {<br/>}
+                  ⚫ Atencion medica personalizada para los menores.{<br/>}
+                  ⚫ Nutricionista especializado.{<br/>}
+                  ⚫Atencion Psicologica.
+
                 </Typography>
               </Grid>
             </Grid>
