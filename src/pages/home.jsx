@@ -10,6 +10,10 @@ import {
 import bannerQuienesSomos from "../assets/images/banner_Home.jpeg";
 import bannerKidsAboutUs from "../assets/images/banner_kidsAboutUs.png";
 import { hexToRGBA } from "../utils/colorUtils";
+import ContentPasteSearchIcon from "@mui/icons-material/ContentPasteSearch";
+import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
+import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
+import CorporateFareIcon from '@mui/icons-material/CorporateFare';
 
 const Home = () => {
   const theme = useTheme();
@@ -59,10 +63,9 @@ const Home = () => {
         >
           {/* Contenido Home */}
 
-          <Box sx={{ p: 7 }}>
+          <Box sx={{ p: 8 }}>
             <Grid container spacing={4}>
-              {/* Parte Izquierda */}
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={12}>
                 <Typography
                   variant="h4"
                   sx={{
@@ -72,6 +75,8 @@ const Home = () => {
                 >
                   Bienvenidos a {<br />} ICQ Infancia Crece Querida
                 </Typography>
+              </Grid>
+              <Grid item xs={12} md={12}>
                 <Typography
                   sx={{
                     color: "black",
@@ -87,75 +92,98 @@ const Home = () => {
                   Nuestra empresa se dedica a la administración de centros
                   educativos de bien social y privados en todo el territorio
                   nacional, con planes de expansión a otros países regionales.{" "}
-                  {<br />} Nuestra misión es asegurar el desarrollo integral de
-                  los niños y niñas en entornos seguros y enriquecedores.
                 </Typography>
-
-                {/* Imagen */}
-                {/* <Box
-                component="img"
-                src={bannerKidsAboutUs}
-                sx={{
-                  width: "100%",
-                  height: "auto",
-                  marginTop: 2,
-                  borderRadius: 1,
-                }}
-              /> */}
-                <Box
-                  component="img"
-                  src={bannerKidsAboutUs}
-                  sx={{
-                    width: "100%",
-                    height: "auto",
-                    marginTop: 2,
-                    borderRadius: 1,
-                    opacity: 0,
-                  }}
-                />
               </Grid>
-              {/* Parte Derecha */}
-              <Grid item xs={12} md={6}>
-                <Box
-                  component="img"
-                  src={bannerKidsAboutUs}
-                  sx={{
-                    width: "100%",
-                    height: "auto",
-                    marginTop: 2,
-                    borderRadius: 1,
-                    opacity: 0,
-                  }}
-                />
-
+              <Grid item xs={6} md={6}>
+                {/* imagen */}
+              </Grid>
+              <Grid item xs={6} md={6}>
                 <Typography
-                  variant="h4"
                   sx={{
-                    p: 2,
                     color: "black",
-                    // textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
+                    p: 2,
                     fontSize: {
                       xs: "body1.fontSize",
                       sm: "h6.fontSize",
                       md: "h5.fontSize",
-                      lg: "h4.fontSize",
                     },
                   }}
+                  variant="body2"
                 >
-                  Nuestros Servicios
+                  Nuestra misión es asegurar el desarrollo integral de los niños
+                  y niñas en entornos seguros y enriquecedores.
                 </Typography>
-                <Typography
-                  variant="body1"
-                  color="initial"
-                  align="center"
-                  sx={{ p: 2 }}
-                >
-                  ⚫ Administramos una red de centros educativos que ofrecen programas de alta calidad para el desarrollo infantil. {<br/>}
-                  ⚫ Atencion medica personalizada para los menores.{<br/>}
-                  ⚫ Nutricionista especializado.{<br/>}
-                  ⚫Atencion Psicologica.
-
-                </Typography>
+              </Grid>
+              <Grid item xs={12} md={12}>
+                <Box>
+                  <Typography
+                    variant="h4"
+                    sx={{
+                      p: 2,
+                      color: "black",
+                      paddingBottom: "2rem",
+                      fontSize: {
+                        xs: "body1.fontSize",
+                        sm: "h6.fontSize",
+                        md: "h5.fontSize",
+                        lg: "h4.fontSize",
+                      },
+                    }}
+                  >
+                    Nuestros Servicios
+                  </Typography>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      gap: 3,
+                    }}
+                  >
+                    <Box sx={{ display: "flex", gap: 1 }}>
+                      <ContentPasteSearchIcon />
+                      <Typography
+                        variant="body1"
+                        color="initial"
+                        align="center"
+                        // sx={{ p: 2 }}
+                      >
+                        Atencion Psicologica
+                      </Typography>
+                    </Box>
+                    <Box sx={{ display: "flex", gap: 1 }}>
+                      <MedicalServicesIcon />
+                      <Typography
+                        variant="body1"
+                        color="initial"
+                        align="center"
+                        // sx={{ p: 2 }}
+                      >
+                        Atencion medica personalizada para los menores
+                      </Typography>
+                    </Box>
+                    <Box sx={{ display: "flex", gap: 1 }}>
+                      <RestaurantMenuIcon />
+                      <Typography
+                        variant="body1"
+                        color="initial"
+                        align="center"
+                        // sx={{ p: 2 }}
+                      >
+                        Nutricion especializada
+                      </Typography>
+                    </Box>
+                    <Box sx={{ display: "flex", gap: 1 }}>
+                      <CorporateFareIcon />
+                      <Typography
+                        variant="body1"
+                        color="initial"
+                        align="center"
+                        // sx={{ p: 2 }}
+                      >
+                        Administracion Centros Educativos
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Box>
               </Grid>
             </Grid>
           </Box>
