@@ -8,12 +8,12 @@ import {
   useTheme,
 } from "@mui/material";
 import bannerQuienesSomos from "../assets/images/banner_Home.jpeg";
-import bannerKidsAboutUs from "../assets/images/banner_kidsAboutUs.png";
+import bannerKidsHome from "../assets/images/banner_kidsHome.png";
 import { hexToRGBA } from "../utils/colorUtils";
 import ContentPasteSearchIcon from "@mui/icons-material/ContentPasteSearch";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
-import CorporateFareIcon from '@mui/icons-material/CorporateFare';
+import CorporateFareIcon from "@mui/icons-material/CorporateFare";
 
 const Home = () => {
   const theme = useTheme();
@@ -95,7 +95,16 @@ const Home = () => {
                 </Typography>
               </Grid>
               <Grid item xs={6} md={6}>
-                {/* imagen */}
+              <Box
+                  component="img"
+                  src={bannerKidsHome}
+                  sx={{
+                    width: "100%",
+                    height: "auto",
+                    marginTop: 2,
+                    borderRadius: 1,
+                  }}
+                />
               </Grid>
               <Grid item xs={6} md={6}>
                 <Typography
@@ -115,7 +124,7 @@ const Home = () => {
                 </Typography>
               </Grid>
               <Grid item xs={12} md={12}>
-                <Box>
+                <Box sx={{ boxShadow: 1}}>
                   <Typography
                     variant="h4"
                     sx={{
@@ -123,14 +132,14 @@ const Home = () => {
                       color: "black",
                       paddingBottom: "2rem",
                       fontSize: {
-                        xs: "body1.fontSize",
+                        xs: "h6.fontSize",
                         sm: "h6.fontSize",
                         md: "h5.fontSize",
-                        lg: "h4.fontSize",
+                        lg: "h5.fontSize",
                       },
                     }}
                   >
-                    Nuestros Servicios
+                    Nuestros Servicios para los menores
                   </Typography>
                   <Box
                     sx={{
@@ -157,7 +166,7 @@ const Home = () => {
                         align="center"
                         // sx={{ p: 2 }}
                       >
-                        Atencion medica personalizada para los menores
+                        Atencion medica personalizada
                       </Typography>
                     </Box>
                     <Box sx={{ display: "flex", gap: 1 }}>

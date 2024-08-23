@@ -80,12 +80,13 @@ const Jobs = () => {
               ¡Unete a nuestro equipo de trabajo!
             </Typography>
             <Typography
-              variant="body1"
-              color="initial"
+              variant="h6"
               sx={
                 {
                   paddingBottom: 8,
-                  // fontWeight: 600,
+                  color: 'black',
+                  fontStyle: "italic",
+                  textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
                 }
               }
             >
@@ -186,8 +187,8 @@ const Jobs = () => {
                 }}
               >
                 {" "}
-                En nuestra empresa siempre buscamos trabajar con personas con
-                ganas de superacion y deseos de crecer.
+                Si no viste ningun puesto de trabajo que se acople a ti, cuentanos en que area te desempeñas. {<br/>}¡En nuestra empresa siempre buscamos trabajar con personas con
+                ganas de superacion y deseos de crecer!
               </Typography>
 
               {/* se coloca el boton */}

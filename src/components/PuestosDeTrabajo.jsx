@@ -48,6 +48,12 @@ const puestosDisponibles = [
     descripcion: "Aca se describe el puesto de trabajo",
     requisitos: "Aca van los requisitos generales minimos para poder aplicar",
   },
+  {
+    id: uuidv4(),
+    puesto: "Psicologia",
+    descripcion: "Puesto de planta y visitas a los centros educativos",
+    requisitos: "Licenciatura en Psicologia. - 2 años de experiencia"
+  }
 ];
 
 // Componente para el botón Aplicar
