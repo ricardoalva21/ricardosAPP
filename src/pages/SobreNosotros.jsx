@@ -65,7 +65,7 @@ const SobreNosotros = () => {
               <Grid item xs={12} md={6}>
                 <Typography
                   variant="h4"
-                  color="initial"
+                  
                   sx={{
                     p: 2,
                   }}
@@ -74,7 +74,7 @@ const SobreNosotros = () => {
                 </Typography>
                 <Typography
                   variant="body1"
-                  color="initial"
+                  
                   sx={{
                     paddingLeft: 2,
                   }}
@@ -103,7 +103,7 @@ const SobreNosotros = () => {
               <Grid item xs={12} md={6}>
                 <Typography
                   variant="body1"
-                  color="initial"
+                  
                   align="center"
                   sx={{ p: 2 }}
                 >
@@ -117,7 +117,7 @@ const SobreNosotros = () => {
                 </Typography>
                 <Typography
                   variant="body1"
-                  color="initial"
+                  
                   align="center"
                   sx={{ p: 2 }}
                 >

@@ -148,122 +148,60 @@ const Home = () => {
                   también apoya a las comunidades en su desarrollo.
                 </Typography>
               </Grid>
-            </Grid>
-
-            {/* Servicios Ofrecidos */}
-            <Box>
-              <Typography
-                variant="h4"
-                sx={{
-                  p: 2,
-                  color: "black",
-                  paddingBottom: "2rem",
-                  fontSize: {
-                    xs: "h6.fontSize",
-                    sm: "h6.fontSize",
-                    md: "h5.fontSize",
-                    lg: "h5.fontSize",
-                  },
-                }}
-              >
-                Nuestros Servicios para los menores :
-              </Typography>
-              <Box sx={{ display: "flex" }}>
-                {/* parte izquierda */}
-                <Box sx={{}}>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      gap: 1,
-                      backgroundColor: successColorWithTransparencyFull,
-                      borderRadius: 2,
-                      p: 1,
-                      m: 2,
-                      boxShadow: 1,
-                    }}
-                  >
-                    <ContentPasteSearchIcon />
-                    <Typography variant="body1" align="center">
-                      <strong>Atención Psicológica especializada</strong> para
-                      apoyar el desarrollo emocional y mental.
-                    </Typography>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      gap: 1,
-                      backgroundColor: successColorWithTransparencyFull,
-                      borderRadius: 2,
-                      p: 1,
-                      m: 2,
-                      boxShadow: 1,
-                    }}
-                  >
-                    <MedicalServicesIcon />
-                    <Typography variant="body1" align="center">
-                      <strong>Atención médica personalizada</strong>, brindando
-                      el cuidado adecuado para cada niño.
-                    </Typography>
-                  </Box>
-                </Box>
-                {/* parte derecha */}
+              
+              <Grid item xs={12} md={12} lg={12} xl={12}>
                 <Box>
+                  <Typography
+                    variant="h4"
+                    sx={{
+                      p: 2,
+                      color: "black",
+                      paddingBottom: "2rem",
+                      fontSize: {
+                        xs: "h6.fontSize",
+                        sm: "h6.fontSize",
+                        md: "h5.fontSize",
+                        lg: "h5.fontSize",
+                      },
+                    }}
+                  >
+                    Nuestros Servicios para los menores
+                  </Typography>
                   <Box
                     sx={{
                       display: "flex",
-                      gap: 1,
-                      backgroundColor: successColorWithTransparencyFull,
-                      borderRadius: 2,
-                      p: 1,
-                      m: 2,
-                      boxShadow: 1,
+                      gap: 3,
                     }}
                   >
-                    <RestaurantMenuIcon />
-                    <Typography variant="body1" align="center">
-                      <strong>Nutrición especializada</strong>, adaptada a las
-                      necesidades de crecimiento y salud de los niños.
-                    </Typography>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      gap: 1,
-                      backgroundColor: successColorWithTransparencyFull,
-                      borderRadius: 2,
-                      p: 1,
-                      m: 2,
-                      boxShadow: 1,
-                    }}
-                  >
-                    <CorporateFareIcon />
-                    <Typography variant="body1" align="center">
-                      <strong> Administración de Centros Educativos</strong> con
-                      programas que estimulan la curiosidad y el aprendizaje.
-                    </Typography>
+                    <Box sx={{ display: "flex", gap: 1 }}>
+                      <ContentPasteSearchIcon />
+                      <Typography variant="body1" align="center">
+                        Atencion Psicologica 
+                      </Typography>
+                      
+                    </Box>
+                    <Box sx={{ display: "flex", gap: 1 }}>
+                      <MedicalServicesIcon />
+                      <Typography variant="body1" align="center">
+                        Atencion medica personalizada
+                      </Typography>
+                    </Box>
+                    <Box sx={{ display: "flex", gap: 1 }}>
+                      <RestaurantMenuIcon />
+                      <Typography variant="body1" align="center">
+                        Nutricion especializada
+                      </Typography>
+                    </Box>
+                    <Box sx={{ display: "flex", gap: 1 }}>
+                      <CorporateFareIcon />
+                      <Typography variant="body1" align="center">
+                        Administracion Centros Educativos
+                      </Typography>
+                    </Box>
                   </Box>
                 </Box>
-              </Box>
-              <Typography
-                sx={{
-                  color: "black",
-                  p: 2,
-                  fontSize: {
-                    xs: "body1.fontSize",
-                    sm: "h6.fontSize",
-                    md: "h5.fontSize",
-                  },
-                }}
-                variant="body2"
-              >
-                Además, estamos comprometidos con la inclusión y la diversidad
-                en nuestros centros, asegurándonos de que cada niño,
-                independientemente de su origen, reciba el mismo nivel de
-                cuidado y atención. Nuestro enfoque holístico nos permite
-                abordar las necesidades individuales y colectivas de cada
-                comunidad, fomentando un sentido de pertenencia y respeto mutuo.
-              </Typography>
-            </Box>
+              </Grid>
+            </Grid>
           </Box>
         </Paper>
       </Container>

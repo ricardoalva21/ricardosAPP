@@ -15,6 +15,7 @@ import { StyledEngineProvider } from '@mui/material/styles';
 import ContactPage from "./pages/Contacto";
 import SobreNosotros from './pages/SobreNosotros'
 import Home from "./pages/home";
+import Home2 from "./pages/home2";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <DrawerAppBar />
         <SecondAppBBar/>
         <Home/>
+        
         <SobreNosotros/>
         <Jobs/>
         <ContactPage/>
