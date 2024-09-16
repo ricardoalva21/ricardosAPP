@@ -81,6 +81,7 @@ const Home = () => {
                   sx={{
                     color: "black",
                     p: 2,
+                    fontWeight: "100",
                     fontSize: {
                       xs: "body1.fontSize",
                       sm: "h6.fontSize",
@@ -88,6 +89,7 @@ const Home = () => {
                     },
                   }}
                   variant="body2"
+                  align="right"
                 >
                   Desde nuestra fundación, hemos trabajado con el objetivo de
                   ofrecer educación de alta calidad y atención especializada a
@@ -110,6 +112,7 @@ const Home = () => {
                     },
                   }}
                   variant="body2"
+                  align="right"
                 >
                   Nuestra misión es proporcionar un entorno seguro, donde los
                   niños puedan desarrollar su máximo potencial, tanto a nivel
@@ -135,13 +138,16 @@ const Home = () => {
                   sx={{
                     color: "black",
                     p: 2,
+                    fontStyle: "italic",
                     fontSize: {
                       xs: "body1.fontSize",
                       sm: "h6.fontSize",
                       md: "h5.fontSize",
                     },
+                    
                   }}
-                  variant="body2"
+                  variant="body1"
+                  align="center"
                 >
                   Nos enorgullece ser un pilar de confianza para las familias,
                   brindando un servicio que no solo cuida de los niños, sino que
@@ -164,6 +170,8 @@ const Home = () => {
                     md: "h5.fontSize",
                     lg: "h5.fontSize",
                   },
+                  textDecoration: 'underline',
+                
                 }}
               >
                 Nuestros Servicios para los menores :
@@ -255,6 +263,7 @@ const Home = () => {
                   },
                 }}
                 variant="body2"
+                align="right"
               >
                 Además, estamos comprometidos con la inclusión y la diversidad
                 en nuestros centros, asegurándonos de que cada niño,

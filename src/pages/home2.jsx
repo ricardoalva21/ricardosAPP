@@ -143,9 +143,9 @@ const Home = () => {
                   }}
                   variant="body2"
                 >
-                  Nos enorgullece ser un pilar de confianza para las familias,
+                 <em> Nos enorgullece ser un pilar de confianza para las familias,
                   brindando un servicio que no solo cuida de los niños, sino que
-                  también apoya a las comunidades en su desarrollo.
+                  también apoya a las comunidades en su desarrollo.</em>
                 </Typography>
               </Grid>
               

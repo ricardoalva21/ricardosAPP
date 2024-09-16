@@ -59,13 +59,12 @@ const SobreNosotros = () => {
         >
           {/* Contenido Sobre Nosotros */}
 
-          <Box sx={{p:7}}>
+          <Box sx={{ p: 7 }}>
             <Grid container spacing={4}>
               {/* Parte Izquierda */}
               <Grid item xs={12} md={6}>
                 <Typography
                   variant="h4"
-                  
                   sx={{
                     p: 2,
                   }}
@@ -73,10 +72,14 @@ const SobreNosotros = () => {
                   Sobre Nosotros
                 </Typography>
                 <Typography
-                  variant="body1"
-                  
+                  variant="body2"
                   sx={{
                     paddingLeft: 2,
+                    fontSize: {
+                      xs: "body1.fontSize",
+                      sm: "h6.fontSize",
+                      md: "h5.fontSize",
+                    },
                   }}
                 >
                   Desde nuestra fundación en 2010, ICQ Infancia Crece Querida ha
@@ -102,10 +105,16 @@ const SobreNosotros = () => {
               {/* Parte Derecha */}
               <Grid item xs={12} md={6}>
                 <Typography
-                  variant="body1"
-                  
-                  align="center"
-                  sx={{ p: 2 }}
+                  variant="body2"
+                  align="left"
+                  sx={{
+                    p: 2,
+                    fontSize: {
+                      xs: "body1.fontSize",
+                      sm: "h6.fontSize",
+                      md: "h5.fontSize",
+                    },
+                  }}
                 >
                   A lo largo de los años, hemos administrado con éxito una red
                   de centros educativos tanto de bien social como privados,
@@ -116,10 +125,16 @@ const SobreNosotros = () => {
                   de la región en el futuro cercano.
                 </Typography>
                 <Typography
-                  variant="body1"
-                  
-                  align="center"
-                  sx={{ p: 2 }}
+                  variant="body2"
+                  align='left'
+                  sx={{
+                    p: 2,
+                    fontSize: {
+                      xs: "body1.fontSize",
+                      sm: "h6.fontSize",
+                      md: "h5.fontSize",
+                    },
+                  }}
                 >
                   En ICQ, creemos firmemente que el bienestar y el desarrollo de
                   los niños y niñas son la prioridad más alta. Nuestro equipo de
