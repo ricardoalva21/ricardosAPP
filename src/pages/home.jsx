@@ -14,6 +14,7 @@ import ContentPasteSearchIcon from "@mui/icons-material/ContentPasteSearch";
 import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
 import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
 import CorporateFareIcon from "@mui/icons-material/CorporateFare";
+import Divider from "@mui/material/Divider";
 
 const Home = () => {
   const theme = useTheme();
@@ -24,11 +25,11 @@ const Home = () => {
   );
   const paperColorWithTransparency = hexToRGBA(
     theme.palette.background.paper,
-    0.5
+    0.4
   );
   const successColorWithTransparencyFull = hexToRGBA(
     theme.palette.success.main,
-    0.4
+    0.3
   );
 
   return (
@@ -38,7 +39,6 @@ const Home = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        // minHeight: "100vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -73,8 +73,9 @@ const Home = () => {
                     color: "black",
                   }}
                 >
-                  Bienvenidos a {<br />} ICQ Infancia Crece Querida
+                  ¡Bienvenidos a {<br />} ICQ Infancia Crece Querida!
                 </Typography>
+                <Divider aria-hidden="true" variant="inset" />
               </Grid>
               <Grid item xs={12} md={12}>
                 <Typography
@@ -139,12 +140,12 @@ const Home = () => {
                     color: "black",
                     p: 2,
                     fontStyle: "italic",
+                    paddingBottom: "4rem",
                     fontSize: {
                       xs: "body1.fontSize",
                       sm: "h6.fontSize",
                       md: "h5.fontSize",
                     },
-                    
                   }}
                   variant="body1"
                   align="center"
@@ -170,11 +171,10 @@ const Home = () => {
                     md: "h5.fontSize",
                     lg: "h5.fontSize",
                   },
-                  textDecoration: 'underline',
-                
+                  textDecoration: "underline",
                 }}
               >
-                Nuestros Servicios para los menores :
+                Nuestros Servicios para los menores:
               </Typography>
               <Box sx={{ display: "flex" }}>
                 {/* parte izquierda */}
@@ -256,6 +256,16 @@ const Home = () => {
                 sx={{
                   color: "black",
                   p: 2,
+                  marginTop: "6rem",
+                  marginBottom: "1rem",
+                  backgroundColor: paperColorWithTransparency,
+                  // borderRadius: 17,
+                  borderTopLeftRadius: "6rem",
+                  borderBottomLeftRadius: "6rem",
+                  borderTopRightRadius:8,
+                  borderBottomRightRadius:8,
+
+                  // boxShadow: 1,
                   fontSize: {
                     xs: "body1.fontSize",
                     sm: "h6.fontSize",

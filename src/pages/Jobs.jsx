@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import PuestosDeTrabajo from "../components/PuestosDeTrabajo";
 import bannerManosFondo from "../assets/images/banner_fondo_manos.png";
+import Divider from "@mui/material/Divider";
 
 import { hexToRGBA } from "../utils/colorUtils";
 
@@ -27,13 +28,12 @@ const Jobs = () => {
   return (
     <Box
       sx={{
-        // maxWidth: "100vw",
         width: "100vw",
         minHeight: "100vh",
         maxWidth: "1920px",
         backgroundImage: `url(${bannerManosFondo})`,
         backgroundSize: "cover",
-        backgroundPosition: "center", // Centra la imagen
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
@@ -49,7 +49,7 @@ const Jobs = () => {
             paddingTop: 7,
             paddingBottom: "5rem",
             backgroundColor: `rgba(255, 255, 255, 0.3)`,
-            backgroundSize: "cover", // Asegura que la imagen cubra todo el contenedor
+            backgroundSize: "cover", 
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
@@ -97,19 +97,19 @@ const Jobs = () => {
               pequeños. Si compartes nuestra visión y estás listo para asumir un
               nuevo desafío, estamos emocionados de conocerte.
             </Typography>
-
+            <Divider aria-hidden="true" variant="inset" />
             <Typography
               variant="h4"
               sx={{
                 p: 2,
                 color: theme.palette.secondary.contraste,
-                // textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
                 fontSize: {
                   xs: "body1.fontSize",
                   sm: "h6.fontSize",
                   md: "h5.fontSize",
                   lg: "h4.fontSize",
                 },
+                marginTop: 2,
               }}
             >
               ¡Explora y Aplica!
@@ -187,7 +187,7 @@ const Jobs = () => {
                 }}
               >
                 {" "}
-                Si no viste ningun puesto de trabajo que se acople a ti, cuentanos en que area te desempeñas. {<br/>}¡En nuestra empresa siempre buscamos trabajar con personas con
+                Si no viste ningún puesto de trabajo que se acople a ti, cuentanos en que area te desempeñas. {<br/>}¡En nuestra empresa siempre buscamos trabajar con personas con
                 ganas de superacion y deseos de crecer!
               </Typography>
 

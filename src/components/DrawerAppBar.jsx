@@ -20,7 +20,7 @@ import { useTheme } from "@mui/material";
 
 
 const drawerWidth = 240;
-const navItems = ["Inicio", "¿Quienes Somos?","Trabajos", "Contacto"];
+const navItems = ["Inicio", "¿Quienes Somos?","Trabajos", "Contacto",];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -46,6 +46,7 @@ function DrawerAppBar(props) {
           
           
         ))}
+        <Divider/>
          <ListItem key='Registrarse' disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText  primary='Registrarse' />

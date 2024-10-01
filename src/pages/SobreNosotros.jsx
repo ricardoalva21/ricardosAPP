@@ -10,6 +10,7 @@ import {
 import bannerQuienesSomos from "../assets/images/banner_Quienes_Somos.jpeg";
 import bannerKidsAboutUs from "../assets/images/banner_kidsAboutUs.png";
 import { hexToRGBA } from "../utils/colorUtils";
+import Divider from "@mui/material/Divider";
 
 const SobreNosotros = () => {
   const theme = useTheme();
@@ -24,7 +25,7 @@ const SobreNosotros = () => {
   );
   const paperColorWithTransparencyFull = hexToRGBA(
     theme.palette.background.paper,
-    0.9
+    0.3
   );
 
   return (
@@ -71,15 +72,20 @@ const SobreNosotros = () => {
                 >
                   Sobre Nosotros
                 </Typography>
+                <Divider aria-hidden="true" variant="middle" />
                 <Typography
                   variant="body2"
                   sx={{
-                    paddingLeft: 2,
                     fontSize: {
                       xs: "body1.fontSize",
                       sm: "h6.fontSize",
                       md: "h5.fontSize",
                     },
+                    backgroundColor: paperColorWithTransparencyFull,
+                    borderRadius: 10,
+                    marginTop: 4,
+                    marginBottom: 20,
+                    p:2,
                   }}
                 >
                   Desde nuestra fundación en 2010, ICQ Infancia Crece Querida ha
@@ -114,6 +120,10 @@ const SobreNosotros = () => {
                       sm: "h6.fontSize",
                       md: "h5.fontSize",
                     },
+                    backgroundColor: paperColorWithTransparencyFull,
+                    borderRadius: 10,
+                    marginTop: 20,
+                    p:2,
                   }}
                 >
                   A lo largo de los años, hemos administrado con éxito una red
@@ -134,6 +144,10 @@ const SobreNosotros = () => {
                       sm: "h6.fontSize",
                       md: "h5.fontSize",
                     },
+                    backgroundColor: paperColorWithTransparencyFull,
+                    borderRadius: 10,
+                    marginTop: 10,
+                    p:2,
                   }}
                 >
                   En ICQ, creemos firmemente que el bienestar y el desarrollo de
