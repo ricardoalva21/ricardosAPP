@@ -86,6 +86,7 @@ const SobreNosotros = () => {
                     marginTop: 4,
                     marginBottom: 20,
                     p:2,
+                    boxShadow: 1,
                   }}
                 >
                   Desde nuestra fundación en 2010, ICQ Infancia Crece Querida ha
@@ -104,7 +105,7 @@ const SobreNosotros = () => {
                     width: "100%",
                     height: "auto",
                     marginTop: 2,
-                    borderRadius: 1,
+                    borderRadius: 0.1,
                   }}
                 />
               </Grid>
@@ -124,6 +125,7 @@ const SobreNosotros = () => {
                     borderRadius: 10,
                     marginTop: 20,
                     p:2,
+                    boxShadow: 0.1,
                   }}
                 >
                   A lo largo de los años, hemos administrado con éxito una red
@@ -148,6 +150,7 @@ const SobreNosotros = () => {
                     borderRadius: 10,
                     marginTop: 10,
                     p:2,
+                    boxShadow: 2,
                   }}
                 >
                   En ICQ, creemos firmemente que el bienestar y el desarrollo de

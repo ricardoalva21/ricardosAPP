@@ -79,14 +79,17 @@ const Jobs = () => {
             >
               ¡Unete a nuestro equipo de trabajo!
             </Typography>
+            <Divider aria-hidden="true" />
             <Typography
               variant="h6"
               sx={
                 {
                   paddingBottom: 8,
+                  paddingTop: 4,
                   color: 'black',
                   fontStyle: "italic",
                   textShadow: "2px 2px 4px rgba(0, 0, 0, 0.1)",
+
                 }
               }
             >
@@ -97,7 +100,7 @@ const Jobs = () => {
               pequeños. Si compartes nuestra visión y estás listo para asumir un
               nuevo desafío, estamos emocionados de conocerte.
             </Typography>
-            <Divider aria-hidden="true" variant="inset" />
+            
             <Typography
               variant="h4"
               sx={{
@@ -147,6 +150,7 @@ const Jobs = () => {
             elevation={2}
           >
             {/* contiene los 3 elementos del segmento */}
+            
             <Box
               sx={{
                 textAlign: "center",

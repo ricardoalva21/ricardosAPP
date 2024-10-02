@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import bannerContacto from "../assets/images/banner_contacto.jpeg";
 import { hexToRGBA } from "../utils/colorUtils";
+import Divider from "@mui/material/Divider";
 
 const ContactPage = () => {
   const handleSubmit = (event) => {
@@ -30,7 +31,7 @@ const ContactPage = () => {
   );
   const paperColorWithTransparencyFull = hexToRGBA(
     theme.palette.background.paper,
-    0.9
+    0.5
   );
 
   return (
@@ -69,15 +70,24 @@ const ContactPage = () => {
           }}
         >
           {/* Titulo del segmento */}
-          <Typography variant="h4" align="center" gutterBottom>
-          ¿Alguna Pregunta?
-          </Typography>
-          {/* Descripcion del segmento */}
-          <Typography variant="body1" align="center" paragraph>
-            Para cualquier consulta o comentario, por favor complete el
-            siguiente formulario o comuníquese a través de los detalles de
-            contacto proporcionados.
-          </Typography>
+          <Box>
+            {" "}
+            <Typography variant="h4" align="center" gutterBottom>
+              ¿Alguna Pregunta?
+            </Typography>
+            <Divider aria-hidden="true" variant="middle" />
+            {/* Descripcion del segmento */}
+            <Typography
+              variant="body1"
+              align="center"
+              paragraph
+              sx={{ paddingTop: 4 }}
+            >
+              Para cualquier consulta o comentario, por favor complete el
+              siguiente formulario o comuníquese a través de los detalles de
+              contacto proporcionados.
+            </Typography>
+          </Box>
           {/* Se define formulario */}
           <Box
             component="form"
@@ -131,35 +141,63 @@ const ContactPage = () => {
               </Grid>
             </Paper>
           </Box>
+
+          <Box sx={{ textAlign: "center", marginTop: 10, marginBottom: 2 }}>
+            <Typography
+              variant="h4"
+              align="center"
+              gutterBottom
+              sx={{
+                display: "inline-block",
+                padding: "0.5rem 1rem",
+                backgroundColor: paperColorWithTransparencyFull,
+                borderRadius: 4,
+              }}
+            >
+              ¡Encuentranos!
+            </Typography>
+          </Box>
+
           {/* se define el mapa de google maps */}
-          <Box sx={{ mt: 4, displa: "flex", m: "auto", marginTop: "6rem" }}>
-            <Box>
-              {" "}
+          <Box sx={{ m: "auto" }}>
+            <Box >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d334.3568159604289!2d-83.94819002902493!3d9.84531481190899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scr!4v1720557538231!5m2!1ses-419!2scr"
                 width="900"
-                height="450"
+                height="400"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                
               ></iframe>
             </Box>
-            {/* Se define informacion de contacto */}
-            <Box sx={{
+          </Box>
+          {/* Se define informacion de contacto */}
+          <Box
+            sx={{
               paddingTop: "4rem",
-            }}>
-              <Typography variant="h5" align="center" gutterBottom>
-                Información de Contacto
-              </Typography>
-              <Typography variant="body1" align="center" paragraph>
-                Dirección: 250mts Este del Hotel El Guarco, Cartago, Costa Rica
-                <br />
-                Teléfono: (506) 25-51-08-29
-                <br />
-                Email: info@infanciacrecequerida.com
-              </Typography>
-            </Box>
+              marginBottom: "-4rem"
+            }}
+          >
+            <Divider aria-hidden="true" variant="middle" />
+            <Typography
+              variant="h5"
+              align="center"
+              gutterBottom
+              sx={{ paddingTop: 4 }}
+            >
+              Información de Contacto
+            </Typography>
+            <Typography variant="body1" align="center" paragraph>
+              Horario de Atencion: Lunes a Viernes de 8am a 5pm
+              <br />
+              Dirección: 250mts Este del Hotel El Guarco, Cartago, Costa Rica
+              <br />
+              Teléfono: (506) 25-51-08-29
+              <br />
+              Email: info@infanciacrecequerida.com
+            </Typography>
           </Box>
         </Paper>
       </Container>

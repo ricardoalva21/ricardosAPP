@@ -159,6 +159,7 @@ const Home = () => {
 
             {/* Servicios Ofrecidos */}
             <Box>
+           
               <Typography
                 variant="h4"
                 sx={{
@@ -252,6 +253,7 @@ const Home = () => {
                   </Box>
                 </Box>
               </Box>
+              
               <Typography
                 sx={{
                   color: "black",
@@ -259,13 +261,11 @@ const Home = () => {
                   marginTop: "6rem",
                   marginBottom: "1rem",
                   backgroundColor: paperColorWithTransparency,
-                  // borderRadius: 17,
+               
                   borderTopLeftRadius: "6rem",
                   borderBottomLeftRadius: "6rem",
                   borderTopRightRadius:8,
                   borderBottomRightRadius:8,
-
-                  // boxShadow: 1,
                   fontSize: {
                     xs: "body1.fontSize",
                     sm: "h6.fontSize",

@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { Box, Paper, Button, Typography, useTheme } from "@mui/material";
+import {
+  Box,
+  Paper,
+  Button,
+  Typography,
+  useTheme,
+  Divider,
+} from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -52,8 +59,8 @@ const puestosDisponibles = [
     id: uuidv4(),
     puesto: "Psicologia",
     descripcion: "Puesto de planta y visitas a los centros educativos",
-    requisitos: "Licenciatura en Psicologia. - 2 años de experiencia"
-  }
+    requisitos: "Licenciatura en Psicologia. - 2 años de experiencia",
+  },
 ];
 
 // Componente para el botón Aplicar
@@ -204,14 +211,12 @@ const PuestosDeTrabajo = () => {
 
   const MostrarOcultarButton = (props) => {
     return (
-      <Box
-        sx={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}
-      >
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Button
           variant="contained"
           onClick={toggleMostrarPuestos}
           sx={{
-            marginTop: 6,
+            // marginTop: 6,
             backgroundColor: theme.palette.secondary.contraste,
             "&:hover": { backgroundColor: theme.palette.secondary.contraste },
           }}
@@ -224,7 +229,7 @@ const PuestosDeTrabajo = () => {
 
   return (
     <div>
-      <Box sx={{display: "flex", justifyContent: "center", width: '100%'}}>
+      <Box sx={{ display: "flex", justifyContent: "center", width: "100%" }}>
         <Box
           component="img"
           src={bannerManosJobs}
@@ -249,8 +254,14 @@ const PuestosDeTrabajo = () => {
             index={index}
           />
         ))}
-      {!mostrarTodos && MostrarOcultarButton("Mostrar más puesto de trabajo")}
-      {mostrarTodos && MostrarOcultarButton("Ocultar puestos de trabajo")}
+      {/* boton mostrar ocultar */}
+      <Divider aria-hidden="true"  variant="middle" sx={{paddingTop: 8,}}>
+        <Box >
+          {!mostrarTodos &&
+            MostrarOcultarButton("Mostrar más puesto de trabajo")}
+          {mostrarTodos && MostrarOcultarButton("Ocultar puestos de trabajo")}
+        </Box>
+      </Divider>
     </div>
   );
 };
